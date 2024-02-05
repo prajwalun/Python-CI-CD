@@ -2,16 +2,23 @@ pipeline {
     agent any
 
     stages {
+        stage('Install Pip') {
+            steps {
+                script {
+                    // Install pip using the package manager (e.g., apt for Debian-based systems)
+                    sh 'apt-get update && apt-get install -y python3-pip'
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
-
-                    // Run pytest
+                    // Now that pip is installed, you can use it for further operations
+                    sh 'pip3 install python@3'
                     sh 'pytest test_math_utils.py'
                 }
             }
         }
     }
-
-    // Additional stages or post-build actions can be defined here
 }
