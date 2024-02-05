@@ -18,3 +18,6 @@ class MathUtils:
             return -1.0
         else:
             return a / b
+
+if __name__ == "__main__":
+    pytest.main(["-v", "--junitxml=report.xml"])
