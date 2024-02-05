@@ -1,6 +1,17 @@
+pipeline {
+    agent any
 
-stage('build') {
-    steps {
-        sh 'pytest test_math_utils.py'
+    stages {
+        stage('Build') {
+            steps {
+                script {
+
+                    // Run pytest
+                    sh 'pytest test_math_utils.py'
+                }
+            }
+        }
     }
+
+    // Additional stages or post-build actions can be defined here
 }
