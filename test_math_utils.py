@@ -30,3 +30,4 @@ def test_divide(math_utils_obj):
     assert math_utils_obj.divide(-6, 3) == -2.0
     assert math_utils_obj.divide(15, 5) == 3.0
     assert math_utils_obj.divide(9, 0) == -1.0
+
