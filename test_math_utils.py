@@ -1,7 +1,7 @@
 import pytest
 from math_utils import MathUtils
 
-
+# Test functions
 @pytest.fixture
 def math_utils_obj():
     return MathUtils()
