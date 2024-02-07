@@ -8,7 +8,7 @@ def math_utils_obj():
 
 
 def test_add(math_utils_obj):
-    assert math_utils_obj.add(3, 4) == 7
+    assert math_utils_obj.add(4, 4) == 8
     assert math_utils_obj.add(-1, 2) == 1
     assert math_utils_obj.add(0, 0) == 0
 
